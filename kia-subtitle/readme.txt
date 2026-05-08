@@ -3,8 +3,8 @@ Contributors: helgatheviking
 Donate link: https://www.paypal.me/kathyisawesome
 Tags: subtitle, simple
 Requires at least: 6.1
-Tested up to: 6.5.0
-Stable tag: 4.0.1
+Tested up to: 7.0.0
+Stable tag: 4.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -190,6 +190,9 @@ add_filter( 'wp_title', 'kia_add_subtitle_to_wp_title' );
 WPML now supports KIA Subtitle!
 
 == Changelog ==
+
+= 4.0.2 =
+* Fix: Escape the before and after attributes using wp_kses_post() in the shortcode() method before passing them to the_subtitle().
 
 = 4.0.1 =
 * Fix: Fix script errors when using site editor, by preventing the sidebar panel from rendering if NOT editing a post.
