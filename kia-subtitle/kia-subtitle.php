@@ -4,7 +4,8 @@
  * Plugin URI: http://www.kathyisawesome.com/436/kia-subtitle/
  * Description: Adds a subtitle field to WordPress' Post editor
  * Author: Kathy Darling
- * Version: 4.0.2
+ * Version: 4.1.0
+ * Requires at least: 6.3
  * Author URI: http://www.kathyisawesome.com
  * License: GPL3
  * Text Domain: kia-subtitle
@@ -47,7 +48,7 @@ class KIA_Subtitle {
 	 * @var KIA_Subtitle The single instance of the class
 	 * @since 1.6
 	 */
-	public $version = '4.0.2';
+	public $version = '4.1.0';
 
 	/**
 	* @constant string donate url
@@ -701,7 +702,7 @@ class KIA_Subtitle {
 		// Add styles and scripts for block editor.
     	if ( 'site-editor' === $current_screen->base || ( self::is_enabled_for_post_type( $current_screen->post_type ) && post_type_supports( $current_screen->post_type, 'custom-fields' ) ) ) {
 
-			$script_asset_path = trailingslashit( plugin_dir_path( __FILE__ ) ) . 'assets/js/dist/frontend/index.asset.php';
+			$script_asset_path = trailingslashit( plugin_dir_path( __FILE__ ) ) . 'assets/js/dist/index.asset.php';
 			$script_asset      = file_exists( $script_asset_path )
 				? require $script_asset_path
 				: array(
